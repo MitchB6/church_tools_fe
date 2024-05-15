@@ -6,7 +6,7 @@ function App() {
   const get_hello_world = async () => {
     try {
       const response = await axios.get('http://localhost:5000/hello');
-      console.log(response);
+      setData(response.data);
     } catch (error) {
       console.error(error);
     }
